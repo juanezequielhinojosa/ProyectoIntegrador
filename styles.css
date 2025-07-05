@@ -1,0 +1,271 @@
+html {
+    font-size: calc(16px + 0.3vw);
+  }
+
+  body {
+    font-family: "Segoe UI", sans-serif;
+    margin: 0;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  header {
+    background-color: black;
+    color: white;
+    padding: 30px;
+    text-align: center;
+    background-image: url("img/1.jpg");
+    height: 600px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 1;
+  }
+
+  header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+  }
+
+  header > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  header h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  header p {
+    font-size: 1.5rem;
+    font-style: italic;
+  }
+
+  nav {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1.5rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #1abc9c;
+  }
+
+  .section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.5rem;
+    align-items: stretch;
+    justify-content: center;
+    min-height: 600px;
+  }
+
+  .section:nth-child(even) {
+    background-color: #ffffff;
+  }
+
+  .text-box {
+    flex: 1;
+    padding: 1.5rem;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #descripcion .text-box,
+  #actividades .text-box {
+    align-items: center;
+    text-align: center;
+  }
+
+  #descripcion .text-box p,
+  .info-box p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 700px;
+  }
+
+  #actividades .text-box h2,
+  #descripcion .text-box h2,
+  .info-box h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 1.2rem;
+    text-align: center;
+  }
+
+  #actividades .text-box .boton-actividad {
+    display: block;
+    background-color: #1abc9c;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    margin: 0.75rem auto;
+    width: 100%;
+    max-width: 700px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  #actividades .text-box .boton-actividad:hover {
+    background-color: #16a085;
+  }
+
+  .image-box {
+    flex: 1;
+    padding: 1.5rem;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .image-box img,
+  .video-frame {
+    width: 100%;
+    height: 100%;
+    min-height: 600px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: none;
+  }
+
+  .form-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.5rem;
+    align-items: center;
+    justify-content: center;
+    background-color: #ecf0f1;
+    min-height: 600px;
+  }
+
+  .form-box,
+  .info-box {
+    flex: 1;
+    padding: 1.5rem;
+    min-width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-box form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+
+  button {
+    background-color: #1abc9c;
+    color: white;
+    padding: 0.9rem 1.25rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  button:hover {
+    background-color: #16a085;
+  }
+
+  .info-box {
+    text-align: center;
+    align-items: center;
+  }
+
+  footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .section,
+    .form-section {
+      flex-direction: column;
+    }
+
+    .image-box img,
+    .video-frame {
+      height: auto;
+      max-height: 400px;
+    }
+
+    nav a {
+      font-size: 1rem;
+      margin: 0 1rem;
+    }
+
+    .form-box,
+    .info-box {
+      min-width: 100%;
+    }
+
+    .form-box form {
+      max-width: 100%;
+    }
+
+    #actividades .text-box .boton-actividad {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+    }
+  }
