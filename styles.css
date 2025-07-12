@@ -93,6 +93,9 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+
 }
 
 #descripcion .text-box,
@@ -282,4 +285,6 @@ footer {
   header p {
     font-size: 1rem;
   }
+
+  
 }

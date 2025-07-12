@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Proyecto Interdisciplinario</title>
     <link rel="stylesheet" href="styles.css">
-
+    <link rel="icon" href="img/favicon-32x32.png" type="image/png" />
   </head>
   <body>
     <header>
@@ -45,20 +45,20 @@
     <section class="section" id="actividades">
       <div class="text-box">
         <h2>Actividades del Proyecto</h2>
-        <button class="boton-actividad">
-          Simulación de circuitos lógicos digitales.
+        <button class="boton-actividad" onclick="location.href='actividad1.html'">
+          Simulación de circuitos lógicos digitales
         </button>
-        <button class="boton-actividad">
-          Diseño conceptual de arquitectura Von Neumann.
+        <button class="boton-actividad" onclick="location.href='actividad2.html'">
+          Diseño conceptual de arquitectura Von Neumann
         </button>
-        <button class="boton-actividad">
-          Configuración de red LAN simulada.
+        <button class="boton-actividad" onclick="location.href='actividad3.html'">
+          Configuración de red LAN simulada
         </button>
-        <button class="boton-actividad">
-          Análisis de riesgos informáticos y legislación vigente.
+        <button class="boton-actividad" onclick="location.href='actividad4.html'">
+          Creación de un protocolo básico de seguridad para proteger los datos de la red
         </button>
-        <button class="boton-actividad">
-          Representación grupal interdisciplinaria.
+        <button class="boton-actividad" onclick="location.href='actividad5.html'">
+          Análisis de legislación vigente aplicable
         </button>
       </div>
       <div class="image-box">
@@ -70,7 +70,7 @@
       <div class="form-box">
         <h2>Inscribite al Proyecto</h2>  
         </p>
-        <form>
+        <form id="formulario">
           <input
             type="text"
             name="nombre"
@@ -106,8 +106,16 @@
     </section>
 
     <footer>
-      <p>&copy; 2025 Proyecto Integrador</p>
+      <p>&copy; 2025 Proyecto Integrador-Grupo N°16</p>
     </footer>
+    <script>
+      document.getElementById("formulario").addEventListener("submit", function (event) {
+        event.preventDefault(); 
+        alert("¡Gracias por participar! Te contactaremos a la brevedad.");
+        this.reset(); 
+      });
+    </script>
+    
   </body>
 </html>
 
